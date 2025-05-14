@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Web App - Login & Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" id="login-container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <div class="error" id="error-msg">User sau parola gresita!</div>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="container dashboard" id="dashboard-container">
+        <h2>Bienvenidos, bine ai venit, <span id="user-name"></span>!</h2>
+        <p>Dashboard dummy pt testing.</p>
+
+        <section>
+            <h3>Informatii profil [hardcoded]</h3>
+            <p><strong>Email:</strong> test@test.test</p>
+            <p><strong>Rol:</strong> Superadmin User</p>
+        </section>
+
+        <section>
+            <h3>Activitate recenta</h3>
+            <table>
+                <thead>
+                    <tr><th>Date</th><th>Action</th><th>Status</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>2025-05-15</td><td>Log In</td><td>Succes</td></tr>
+                    <tr><td>2025-05-14</td><td>Update Profil</td><td>Succes</td></tr>
+                    <tr><td>2025-05-13</td><td>Incercare schimbare parola</td><td>Esec</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h3>Form pt. Feedback</h3>
+            <input type="text" id="feedback" placeholder="Scrieti feedback-ul aici!">
+            <button onclick="submitFeedback()">Trimitere Feedback</button>
+            <p id="feedback-msg" style="color: green; display:none;">Feedback trimis!</p>
+        </section>
+
+        <section>
+            <h3>Statistice</h3>
+            <div class="chart-placeholder">
+                <p>[Chart Placeholder]</p>
+            </div>
+        </section>
+
+        <nav>
+            <button onclick="alert('Going to Settings...')">SETARI</button>
+            <button onclick="alert('Going to Reports...')">REPORTS</button>
+        </nav>
+
+        <button onclick="logout()">Logout</button>
+
+        <footer>
+            &copy; test123
+        </footer>
+    </div>
+
+    <script>
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('error-msg');
+
+            if(username === 'test123' && password === 'test123') {
+                document.getElementById('login-container').style.display = 'none';
+                document.getElementById('dashboard-container').style.display = 'block';
+                document.getElementById('user-name').innerText = username;
+            } else {
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        function logout() {
+            document.getElementById('dashboard-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+            document.getElementById('error-msg').style.display = 'none';
+        }
+
+        function submitFeedback() {
+            const feedbackInput = document.getElementById('feedback').value;
+            if(feedbackInput.trim() !== '') {
+                document.getElementById('feedback-msg').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
