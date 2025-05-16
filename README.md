@@ -1,7 +1,7 @@
 <h1>Proiect - [T6] Testarea Interfetei Grafice A Unei Aplicatii Web</h1>
 
 
-<h3>Cerinta: </h3>
+<h3>Cerinta:</h3>
 - "Să se realizeze un studiu comparativ a cel puţin 2 framework-uri de testare, evidențiindu-se
 utilitatea şi ușurința în folosire a fiecăruia. Pe baza unor exemple de cod, se vor evidenția
 diferențele dintre tool-uri."
@@ -10,12 +10,12 @@ de funcționalitate, navigare, validare formular, compatibilitate browser et al.
 făcută."
 
 
-<h3>Tehnologii folosite: </h3>
-- NPM Framework pentru testare
-- Cypress
-- Selenium
+<h3>Tehnologii folosite:</h3>
+- NPM Framework pentru testare 
+- Cypress 
+- Selenium 
 - Python (limbaj principal de programare)
-- JavaScript, HTML
+- JavaScript, HTML 
 - XAMPP (webhosting local)
 - MySQL (via XAMPP) - nefolosit momentan
 
