@@ -1,4 +1,4 @@
-<title>Proiect - [T6] Testarea Interfetei Grafice A Unei Aplicatii Web</title>
+<h1>Proiect - [T6] Testarea Interfetei Grafice A Unei Aplicatii Web</h1>
 
 
 <h3>Cerinta: </h3>
@@ -41,6 +41,9 @@ Am creat o pagina web `home.html` insotita de un fisier tip css pentru design. P
 
 ### Implementarea testelor
 Pentru teste, am folosit Cypress si Selenium.
+Testele create sunt:
+- Selenium: ![test_selenium](selenium/selenium_test.py)
+- Cypress: ![test_selenium](cypress/e2e/home.cy.js)
 
 ### Metrici comparative
 1. Timp de executie a testului
@@ -108,7 +111,7 @@ Se pot vedea in screenshot-uri atat timpii de executie, cat si rularile cu succe
 In timpul scrierii testelor de Cypress, am folosit Copilot. Pe langa asistenta automata (precum sugestia de cod predictiva), Copilot m-a ajutat sa traduc idei din alte limbaje (Python) in JavaScript, plus sa folosesc metodele default Cypress.
 Aceste lucruri au facut procesul de testare sa fie mai rapid, eliminand timpul de cautare al unui programator (eu) pe Google, prin documentatie oficiala sau prin alte surse, cautand solutii sau sintaxa/metode/parametri.
 
-## V, Concluzii
+## V. Concluzii
 Am realizat cu succes un proiect de testare a interfetei grafice web, lucru pe care nu l-am mai facut pana acum si ma bucur ca m-am intersectat cu aceasta zona a programarii.
 Legat de cele doua framework-uri folosite, consider ca Selenium este bun pentru proiecte mai mici, dar Cypress are mai mult potential daca e folosit la maxim.
 Selenium a fost mai eficient si rapid pentru acest tip de aplicatie simpla, in timp ce Cypress ramane important pentru compatibilitate extinsa, scalabilitate, specificitate etc.
